@@ -26,7 +26,7 @@ function App() {
           />
 
           <Heading size={"lg"} pt={5}>
-            Diether Pastulero
+            Diether Pastulero 23
           </Heading>
           <Text size={"md"} fontWeight={"semibold"}>
             Email: reyskee23@gmail.com
