@@ -26,7 +26,7 @@ function App() {
           />
 
           <Heading size={"lg"} pt={5}>
-            Diether Pastulero 233
+            Diether Pastulero
           </Heading>
           <Text size={"md"} fontWeight={"semibold"}>
             Email: reyskee23@gmail.com
@@ -36,7 +36,7 @@ function App() {
           </Text>
 
           <Heading size={"md"} pb={2}>
-            Soft Skills
+            Skills
           </Heading>
           <SimpleGrid columns={2} spacing={2}>
             <Box>Customer Service</Box>
@@ -106,17 +106,16 @@ function App() {
               <ListItem>Azure Workloads and Security</ListItem>
               <ListItem>Azure Pricing and Support</ListItem>
             </UnorderedList>
-
             <Heading w={"50vw"} size={"md"} pt={4} pb={2}>
-              Work Experience
+              TFT Experience
             </Heading>
             <HStack>
               <Box bg="gray.800" w="40vw">
-                <Text fontWeight={"semibold"}>Oporto - Team Member</Text>
+                <Text fontWeight={"semibold"}>Forever Silver</Text>
               </Box>
               <Box bg="gray.800">
                 <Text fontWeight={"semibold"} textAlign={"end"}>
-                  Feb 2017 - Nov 2018
+                  Ongoing
                 </Text>
               </Box>
             </HStack>
@@ -124,7 +123,7 @@ function App() {
             <Heading w={"50vw"} size={"md"} pt={4} pb={2}>
               Projects
             </Heading>
-
+            
             <HStack>
               <Box bg="gray.800" w="40vw">
                 <Text fontWeight={"semibold"}>Cloud Resume Challenge</Text>
@@ -137,9 +136,9 @@ function App() {
             </HStack>
 
             <UnorderedList pl={5}>
-              <ListItem>HTML, Javascript</ListItem>
-              <ListItem>..</ListItem>
-              <ListItem>..</ListItem>
+              <ListItem>HTML, Reactjs using Vite</ListItem>
+              <ListItem>Azure Function HTTP Trigger</ListItem>
+              <ListItem>Azure Cosmos DB</ListItem>
               <ListItem>....</ListItem>
             </UnorderedList>
           </VStack>
