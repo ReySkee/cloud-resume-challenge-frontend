@@ -12,18 +12,14 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
-
-
 function App() {
 
   const [response, setResponse] = useState(null);
-  //const dotenv = require('dotenv');
 
-  console.log(import.meta.env.API_URL);
   useEffect(() => {
     async function fetchData() {
       const res = await fetch(
-        import.meta.env.VITE_API_URL
+        'https://diethernodejs.azurewebsites.net/api/HttpTrigger1?code=2WlIxQ0yrlZCH-NXegSpvCvadUui9w1MprfhkIBgppJEAzFuzfXIgw=='
       );
       const data = await res.json();
       //console.log(data)
