@@ -10,9 +10,28 @@ import {
   VStack,
   ListItem,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+
 
 function App() {
+
+  const [response, setResponse] = useState(null);
+  //const dotenv = require('dotenv');
+
+  console.log(import.meta.env.API_URL);
+  useEffect(() => {
+    async function fetchData() {
+      const res = await fetch(
+        import.meta.env.VITE_API_URL
+      );
+      const data = await res.json();
+      //console.log(data)
+      setResponse(data);
+    }
+    fetchData();
+  }, []);
+
   return (
     <Flex width={"100vw"} height={"100vh"} justifyContent={"center"}>
       <HStack align="stretch">
@@ -26,10 +45,10 @@ function App() {
           />
 
           <Heading size={"lg"} pt={5}>
-            Diether Pastulero
+            Diether Pastulero {response && <p>{response.count}</p>}
           </Heading>
           <Text size={"md"} fontWeight={"semibold"}>
-            Email: reyskee23@gmail.com
+            Email: reyskee23@gmail.com 
           </Text>
           <Text size={"md"} fontWeight={"semibold"} pb={5}>
             Mobile: 0479157915
