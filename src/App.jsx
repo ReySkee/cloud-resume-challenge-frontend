@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       const res = await fetch(
-        'https://diethernodejs.azurewebsites.net/api/HttpTrigger1?code=2WlIxQ0yrlZCH-NXegSpvCvadUui9w1MprfhkIBgppJEAzFuzfXIgw=='
+        testenv
       );
       const data = await res.json();
       //console.log(data)
