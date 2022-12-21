@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       const res = await fetch(
-        testenv
+        process.env.API_URL
       );
       const data = await res.json();
       //console.log(data)
