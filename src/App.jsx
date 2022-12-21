@@ -13,20 +13,14 @@ import {
 import { useEffect, useState } from "react";
 
 function App() {
-
   const [response, setResponse] = useState(null);
 
-  const testenv = import.meta.env.VITE_API_URL;
-  console.log(testenv);
-  
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch(
-        'https://diethernodejs.azurewebsites.net/api/HttpTrigger1?code=2WlIxQ0yrlZCH-NXegSpvCvadUui9w1MprfhkIBgppJEAzFuzfXIgw=='
-      );
+      const res = await fetch(apiUrl);
       const data = await res.json();
-      //console.log(data)
       setResponse(data);
     }
     fetchData();
@@ -35,7 +29,15 @@ function App() {
   return (
     <Flex width={"100vw"} height={"100vh"} justifyContent={"center"}>
       <HStack align="stretch">
-        <Box textColor={"white"} borderWidth={3} borderColor={"blackAlpha.700"} bg="gray.800" w="30%" p={3} borderRadius='lg'>
+        <Box
+          textColor={"white"}
+          borderWidth={3}
+          borderColor={"blackAlpha.700"}
+          bg="gray.800"
+          w="30%"
+          p={3}
+          borderRadius="lg"
+        >
           <Image
             borderRadius="full"
             boxSize="150px"
@@ -48,7 +50,7 @@ function App() {
             Diether Pastulero {response && <p>{response.count}</p>}
           </Heading>
           <Text size={"md"} fontWeight={"semibold"}>
-            Email: reyskee23@gmail.com 
+            Email: reyskee23@gmail.com
           </Text>
           <Text size={"md"} fontWeight={"semibold"} pb={5}>
             Mobile: 0479157915
@@ -66,12 +68,20 @@ function App() {
             <Box>Adaptability</Box>
           </SimpleGrid>
         </Box>
-        <Box textColor={"white"} borderRadius='lg' borderWidth={3} borderColor={"whiteAlpha.50"} bg="gray.800" width={"70vw"} p={10}>
+        <Box
+          textColor={"white"}
+          borderRadius="lg"
+          borderWidth={3}
+          borderColor={"whiteAlpha.50"}
+          bg="gray.800"
+          width={"70vw"}
+          p={10}
+        >
           <VStack align="stretch">
             <Heading w={"50vw"} size={"md"} pt={4} pb={2}>
               Education
             </Heading>
-            <HStack >
+            <HStack>
               <Box bg="gray.800" w="40vw">
                 <Text fontWeight={"semibold"}>
                   Queensland University of Technology (QUT)
@@ -142,7 +152,7 @@ function App() {
             <Heading w={"50vw"} size={"md"} pt={4} pb={2}>
               Projects
             </Heading>
-            
+
             <HStack>
               <Box bg="gray.800" w="40vw">
                 <Text fontWeight={"semibold"}>Cloud Resume Challenge</Text>
@@ -155,7 +165,9 @@ function App() {
             </HStack>
 
             <UnorderedList pl={5}>
-              <ListItem>HTML, Reactjs using Vite to create a front end site</ListItem>
+              <ListItem>
+                HTML, Reactjs using Vite to create a front end site
+              </ListItem>
               <ListItem>Azure Function HTTP Trigger</ListItem>
               <ListItem>Azure Cosmos DB</ListItem>
               <ListItem>....</ListItem>
