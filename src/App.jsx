@@ -16,6 +16,10 @@ function App() {
 
   const [response, setResponse] = useState(null);
 
+  const testenv = import.meta.env.VITE_API_URL;
+  console.log(testenv);
+  
+
   useEffect(() => {
     async function fetchData() {
       const res = await fetch(
@@ -151,7 +155,7 @@ function App() {
             </HStack>
 
             <UnorderedList pl={5}>
-              <ListItem>HTML, Reactjs using Vite</ListItem>
+              <ListItem>HTML, Reactjs using Vite to create a front end site</ListItem>
               <ListItem>Azure Function HTTP Trigger</ListItem>
               <ListItem>Azure Cosmos DB</ListItem>
               <ListItem>....</ListItem>
