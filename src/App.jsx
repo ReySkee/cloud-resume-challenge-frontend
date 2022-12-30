@@ -1,4 +1,5 @@
 import {
+  Stack,
   Image,
   Box,
   Flex,
@@ -9,6 +10,7 @@ import {
   UnorderedList,
   VStack,
   ListItem,
+  Divider
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
@@ -28,13 +30,11 @@ function App() {
 
   return (
     <Flex width={"100vw"} height={"100vh"} justifyContent={"center"}>
-      <HStack align="stretch">
+      <Stack direction={['column', 'row']} spacing='0px'>
         <Box
-          textColor={"white"}
-          borderWidth={3}
-          borderColor={"blackAlpha.700"}
-          bg="gray.800"
-          w="30%"
+
+          bg="gray.900"  
+
           p={3}
           borderRadius="lg"
         >
@@ -42,12 +42,12 @@ function App() {
             borderRadius="full"
             boxSize="150px"
             src="https://legendary-digital-network-assets.s3.amazonaws.com/wp-content/uploads/2021/12/12191403/Spider-Man-No-Way-Home-Miles-Morales.jpg"
-            alt="Dan Abramov"
+            alt="Site Outbound Not Working"
             align="stretch"
           />
 
           <Heading size={"lg"} pt={5}>
-            Diether Pastulero {response && <p>{response.count}</p>}
+            Diether Pastulero 
           </Heading>
           <Text size={"md"} fontWeight={"semibold"}>
             Email: reyskee23@gmail.com
@@ -59,7 +59,7 @@ function App() {
           <Heading size={"md"} pb={2}>
             Skills
           </Heading>
-          <SimpleGrid columns={2} spacing={2}>
+          <SimpleGrid columns={2} spacing={2} pb={10}>
             <Box>Customer Service</Box>
             <Box>Communication</Box>
             <Box>Time Management</Box>
@@ -67,14 +67,14 @@ function App() {
             <Box>Teamwork</Box>
             <Box>Adaptability</Box>
           </SimpleGrid>
+
+          <Box>
+            Page Visited:{response && <p>{response.count}</p>} 
+          </Box>
         </Box>
+        <Divider orientation='vertical' />
         <Box
-          textColor={"white"}
-          borderRadius="lg"
-          borderWidth={3}
-          borderColor={"whiteAlpha.50"}
-          bg="gray.800"
-          width={"70vw"}
+          bg="gray.900"         
           p={10}
         >
           <VStack align="stretch">
@@ -82,12 +82,12 @@ function App() {
               Education
             </Heading>
             <HStack>
-              <Box bg="gray.800" w="40vw">
+              <Box w="40vw">
                 <Text fontWeight={"semibold"}>
                   Queensland University of Technology (QUT)
                 </Text>
               </Box>
-              <Box bg="gray.800">
+              <Box>
                 <Text fontWeight={"semibold"} textAlign={"end"}>
                   Expected End Date - 2023
                 </Text>
@@ -101,10 +101,10 @@ function App() {
               <ListItem>User Experience</ListItem>
             </UnorderedList>
             <HStack>
-              <Box bg="gray.800" w="40vw">
+              <Box  w="40vw">
                 <Text fontWeight={"semibold"}>Google IT Support by Google</Text>
               </Box>
-              <Box bg="gray.800">
+              <Box >
                 <Text fontWeight={"semibold"} textAlign={"end"}>
                   Certificate Earned in 2022
                 </Text>
@@ -118,12 +118,12 @@ function App() {
               <ListItem>Troubleshooting</ListItem>
             </UnorderedList>
             <HStack>
-              <Box bg="gray.800" w="40vw">
+              <Box  w="40vw">
                 <Text fontWeight={"semibold"}>
                   Microsoft Certified: AZ-900 - Azure Fundamentals
                 </Text>
               </Box>
-              <Box bg="gray.800">
+              <Box >
                 <Text fontWeight={"semibold"} textAlign={"end"}>
                   Certificate Earned in 2022
                 </Text>
@@ -139,10 +139,10 @@ function App() {
               TFT Experience
             </Heading>
             <HStack>
-              <Box bg="gray.800" w="40vw">
-                <Text fontWeight={"semibold"}>Forever Silver</Text>
+              <Box  w="40vw">
+                <Text fontWeight={"semibold"}>Forever Gold</Text>
               </Box>
-              <Box bg="gray.800">
+              <Box >
                 <Text fontWeight={"semibold"} textAlign={"end"}>
                   Ongoing
                 </Text>
@@ -154,10 +154,10 @@ function App() {
             </Heading>
 
             <HStack>
-              <Box bg="gray.800" w="40vw">
+              <Box  w="40vw">
                 <Text fontWeight={"semibold"}>Cloud Resume Challenge</Text>
               </Box>
-              <Box bg="gray.800">
+              <Box >
                 <Text fontWeight={"semibold"} textAlign={"end"}>
                   Ongoing
                 </Text>
@@ -174,7 +174,7 @@ function App() {
             </UnorderedList>
           </VStack>
         </Box>
-      </HStack>
+      </Stack>
     </Flex>
   );
 }
