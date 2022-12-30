@@ -146,9 +146,6 @@ function App() {
               <ListItem>Azure Workloads and Security</ListItem>
               <ListItem>Azure Pricing and Support</ListItem>
             </UnorderedList>
-            <Heading w={"50vw"} size={"md"} pt={4} pb={2}>
-              TFT Experience
-            </Heading>
             <HStack>
               <Box w="40vw">
                 <Text fontWeight={"semibold"}>Forever Gold</Text>
