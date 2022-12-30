@@ -10,9 +10,14 @@ import {
   UnorderedList,
   VStack,
   ListItem,
-  Divider
+  Divider,
+  Center,
+  Icon,
+  Link,
+  Tooltip,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 
 function App() {
   const [response, setResponse] = useState(null);
@@ -30,24 +35,19 @@ function App() {
 
   return (
     <Flex width={"100vw"} height={"100vh"} justifyContent={"center"}>
-      <Stack direction={['column', 'row']} spacing='0px'>
-        <Box
-
-          bg="gray.900"  
-
-          p={3}
-          borderRadius="lg"
-        >
-          <Image
-            borderRadius="full"
-            boxSize="150px"
-            src="https://legendary-digital-network-assets.s3.amazonaws.com/wp-content/uploads/2021/12/12191403/Spider-Man-No-Way-Home-Miles-Morales.jpg"
-            alt="Site Outbound Not Working"
-            align="stretch"
-          />
+      <Stack direction={["column", "row"]} spacing="0px">
+        <Box bg="gray.900" p={3} borderRadius="lg">
+          <Center>
+            <Image
+              borderRadius="full"
+              boxSize="150px"
+              src="./avatar.jpg"
+              alt="It's a picture of myself"
+            />
+          </Center>
 
           <Heading size={"lg"} pt={5}>
-            Diether Pastulero 
+            Diether Pastulero
           </Heading>
           <Text size={"md"} fontWeight={"semibold"}>
             Email: reyskee23@gmail.com
@@ -55,8 +55,21 @@ function App() {
           <Text size={"md"} fontWeight={"semibold"} pb={5}>
             Mobile: 0479157915
           </Text>
+          <Tooltip label="GitHub">
+            <Link href="https://github.com/ReySkee" isExternal>
+              <Icon boxSize={8} as={IoLogoGithub} />
+            </Link>
+          </Tooltip>
+          <Tooltip label="LinkedIn">
+            <Link
+              href="https://www.linkedin.com/in/dietherpastulero/"
+              isExternal
+            >
+              <Icon boxSize={8} as={IoLogoLinkedin} />
+            </Link>
+          </Tooltip>
 
-          <Heading size={"md"} pb={2}>
+          <Heading size={"md"} pb={2} pt={2}>
             Skills
           </Heading>
           <SimpleGrid columns={2} spacing={2} pb={10}>
@@ -67,16 +80,14 @@ function App() {
             <Box>Teamwork</Box>
             <Box>Adaptability</Box>
           </SimpleGrid>
-
-          <Box>
-            Page Visited:{response && <p>{response.count}</p>} 
-          </Box>
+          
+          
+          <Box>Page Visited: {response && <p>{response.count}</p>}</Box>
+          
+          
         </Box>
-        <Divider orientation='vertical' />
-        <Box
-          bg="gray.900"         
-          p={10}
-        >
+        <Divider orientation="vertical" />
+        <Box bg="gray.900" p={10}>
           <VStack align="stretch">
             <Heading w={"50vw"} size={"md"} pt={4} pb={2}>
               Education
@@ -101,10 +112,10 @@ function App() {
               <ListItem>User Experience</ListItem>
             </UnorderedList>
             <HStack>
-              <Box  w="40vw">
+              <Box w="40vw">
                 <Text fontWeight={"semibold"}>Google IT Support by Google</Text>
               </Box>
-              <Box >
+              <Box>
                 <Text fontWeight={"semibold"} textAlign={"end"}>
                   Certificate Earned in 2022
                 </Text>
@@ -118,12 +129,12 @@ function App() {
               <ListItem>Troubleshooting</ListItem>
             </UnorderedList>
             <HStack>
-              <Box  w="40vw">
+              <Box w="40vw">
                 <Text fontWeight={"semibold"}>
                   Microsoft Certified: AZ-900 - Azure Fundamentals
                 </Text>
               </Box>
-              <Box >
+              <Box>
                 <Text fontWeight={"semibold"} textAlign={"end"}>
                   Certificate Earned in 2022
                 </Text>
@@ -139,10 +150,10 @@ function App() {
               TFT Experience
             </Heading>
             <HStack>
-              <Box  w="40vw">
+              <Box w="40vw">
                 <Text fontWeight={"semibold"}>Forever Gold</Text>
               </Box>
-              <Box >
+              <Box>
                 <Text fontWeight={"semibold"} textAlign={"end"}>
                   Ongoing
                 </Text>
@@ -154,10 +165,10 @@ function App() {
             </Heading>
 
             <HStack>
-              <Box  w="40vw">
+              <Box w="40vw">
                 <Text fontWeight={"semibold"}>Cloud Resume Challenge</Text>
               </Box>
-              <Box >
+              <Box>
                 <Text fontWeight={"semibold"} textAlign={"end"}>
                   Ongoing
                 </Text>
@@ -166,11 +177,15 @@ function App() {
 
             <UnorderedList pl={5}>
               <ListItem>
-                HTML, Reactjs using Vite to create a front end site
+                Azure Static Web Apps - Reactjs using Vite to create a front end
+                site
               </ListItem>
               <ListItem>Azure Function HTTP Trigger</ListItem>
               <ListItem>Azure Cosmos DB</ListItem>
-              <ListItem>....</ListItem>
+              <ListItem>Azure DNS Zone</ListItem>
+              <ListItem>
+                GitHub Actions (CI/CD) for the website and function app
+              </ListItem>
             </UnorderedList>
           </VStack>
         </Box>
