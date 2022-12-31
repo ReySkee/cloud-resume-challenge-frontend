@@ -146,17 +146,6 @@ function App() {
               <ListItem>Azure Workloads and Security</ListItem>
               <ListItem>Azure Pricing and Support</ListItem>
             </UnorderedList>
-            <HStack>
-              <Box w="40vw">
-                <Text fontWeight={"semibold"}>Forever Gold</Text>
-              </Box>
-              <Box>
-                <Text fontWeight={"semibold"} textAlign={"end"}>
-                  Ongoing
-                </Text>
-              </Box>
-            </HStack>
-
             <Heading w={"50vw"} size={"md"} pt={4} pb={2}>
               Projects
             </Heading>
