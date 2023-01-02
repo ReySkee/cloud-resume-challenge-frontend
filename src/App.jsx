@@ -14,7 +14,7 @@ import {
   Center,
   Icon,
   Link,
-  Tooltip,
+  Tooltip, Tab, Tabs, TabList, TabPanels, TabPanel
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
@@ -87,9 +87,17 @@ function App() {
           
         </Box>
         <Divider orientation="vertical" />
-        <Box bg="gray.900" p={10}>
-          <VStack align="stretch">
-            <Heading w={"50vw"} size={"md"} pt={4} pb={2}>
+        <Box bg="gray.900" p={10} w={"58vw"}>
+          <Tabs>
+            <TabList>
+              <Tab> About me</Tab>
+              <Tab> How i made this site</Tab>
+            </TabList>
+
+            <TabPanels>
+              <TabPanel>
+              <VStack align="stretch">
+            <Heading size={"md"} pt={4} pb={2}>
               Education
             </Heading>
             <HStack>
@@ -146,7 +154,7 @@ function App() {
               <ListItem>Azure Workloads and Security</ListItem>
               <ListItem>Azure Pricing and Support</ListItem>
             </UnorderedList>
-            <Heading w={"50vw"} size={"md"} pt={4} pb={2}>
+            <Heading size={"md"} pt={4} pb={2}>
               Projects
             </Heading>
 
@@ -174,6 +182,18 @@ function App() {
               </ListItem>
             </UnorderedList>
           </VStack>
+              </TabPanel>
+              <TabPanel>
+                <VStack align={'stretch'}>
+                <Heading size={"md"} pt={4} pb={2}>
+                  Coming Soon...
+                </Heading>
+                </VStack>
+              </TabPanel>
+            </TabPanels>
+          </Tabs>
+
+          
         </Box>
       </Stack>
     </Flex>
