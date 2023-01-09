@@ -18,6 +18,7 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
+import Blog from "./blog";
 
 function App() {
   const [response, setResponse] = useState(null);
@@ -87,7 +88,7 @@ function App() {
           
         </Box>
         <Divider orientation="vertical" />
-        <Box bg="gray.900" p={10} w={"58vw"}>
+        <Box bg="gray.900" p={10} >
           <Tabs>
             <TabList>
               <Tab> About me</Tab>
@@ -185,9 +186,9 @@ function App() {
               </TabPanel>
               <TabPanel>
                 <VStack align={'stretch'}>
-                <Heading size={"md"} pt={4} pb={2}>
-                  Coming Soon...
-                </Heading>
+                
+                  <Blog />
+                
                 </VStack>
               </TabPanel>
             </TabPanels>
