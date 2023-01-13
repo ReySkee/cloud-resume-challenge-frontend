@@ -165,7 +165,7 @@ function App() {
               </Box>
               <Box>
                 <Text fontWeight={"semibold"} textAlign={"end"}>
-                  Ongoing
+                  Completed
                 </Text>
               </Box>
             </HStack>
