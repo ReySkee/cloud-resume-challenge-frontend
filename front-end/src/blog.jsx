@@ -8,8 +8,8 @@ import {
     
     return (
         <>
-        <Box overflowY={"auto" } maxHeight="800px" w="50.15vw">
-            <Box w="40vw" >
+        <Box overflowY={"auto" } maxHeight="800px" w="50.15vw" >
+            <Box pr={2} >
                 <Text pb={4}>
                     8/01/2023
                 </Text>

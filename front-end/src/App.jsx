@@ -74,12 +74,12 @@ function App() {
             Skills
           </Heading>
           <SimpleGrid columns={2} spacing={2} pb={10}>
-            <Box>Customer Service</Box>
-            <Box>Communication</Box>
-            <Box>Time Management</Box>
-            <Box>Organisation</Box>
-            <Box>Teamwork</Box>
-            <Box>Adaptability</Box>
+            <Box>React</Box>
+            <Box>Javascript</Box>
+            <Box>Agile</Box>
+            <Box>Microsoft Azure</Box>
+            <Box>IaC (Bicep)</Box>
+            <Box>CI/CD</Box>
           </SimpleGrid>
           
           
@@ -88,11 +88,11 @@ function App() {
           
         </Box>
         <Divider orientation="vertical" />
-        <Box bg="gray.900" p={10} >
-          <Tabs>
+        <Box bg="gray.900" p={10}  >
+          <Tabs isFitted variant='enclosed'>
             <TabList>
               <Tab> About me</Tab>
-              <Tab> How i made this site</Tab>
+              <Tab> Site Creation - Behind the Scenes</Tab>
             </TabList>
 
             <TabPanels>
@@ -104,43 +104,25 @@ function App() {
             <HStack>
               <Box w="40vw">
                 <Text fontWeight={"semibold"}>
-                  Queensland University of Technology (QUT)
+                  Bachelor of Information Technology (Information Systems)
+                  
                 </Text>
               </Box>
               <Box>
                 <Text fontWeight={"semibold"} textAlign={"end"}>
-                  Expected End Date - 2023
+                  Completion in Dec 2023
                 </Text>
               </Box>
             </HStack>
-            <UnorderedList pl={5}>
-              <ListItem>Process Modelling</ListItem>
-              <ListItem>Web Computing/Deployment</ListItem>
-              <ListItem>Business Analyst</ListItem>
-              <ListItem>Project Management</ListItem>
-              <ListItem>User Experience</ListItem>
-            </UnorderedList>
-            <HStack>
-              <Box w="40vw">
-                <Text fontWeight={"semibold"}>Google IT Support by Google</Text>
-              </Box>
-              <Box>
-                <Text fontWeight={"semibold"} textAlign={"end"}>
-                  Certificate Earned in 2022
-                </Text>
-              </Box>
-            </HStack>
-            <UnorderedList pl={5}>
-              <ListItem>Customer Service</ListItem>
-              <ListItem>Networking</ListItem>
-              <ListItem>Security</ListItem>
-              <ListItem>Hardware</ListItem>
-              <ListItem>Troubleshooting</ListItem>
-            </UnorderedList>
-            <HStack>
+            <Text as='i'>Queensland University of Technology (QUT)</Text>
+            <Text w="40vw" pl={3} as='i'>
+              Relevant Courseworks: Web Computing, Software Development, Business Requirement Analysis, 
+              Interaction and Experience Design, IT Project Management, Cloud Information Systems, Cloud Computing
+            </Text>
+            <HStack pt={4}>
               <Box w="40vw">
                 <Text fontWeight={"semibold"}>
-                  Microsoft Certified: AZ-900 - Azure Fundamentals
+                  Microsoft Certified: Azure Fundamentals
                 </Text>
               </Box>
               <Box>
@@ -149,46 +131,70 @@ function App() {
                 </Text>
               </Box>
             </HStack>
-            <UnorderedList pl={5}>
-              <ListItem>Cloud Concepts</ListItem>
-              <ListItem>Azure Services</ListItem>
-              <ListItem>Azure Workloads and Security</ListItem>
-              <ListItem>Azure Pricing and Support</ListItem>
-            </UnorderedList>
+            <Text as='i'>
+              Provides a foundational understanding of cloud computing and Microsoft Azure services
+            </Text>
+            <HStack pt={4}>
+              <Box w="40vw">
+                <Text fontWeight={"semibold"}>
+                Microsoft Certified: Azure Administrator Associate
+                </Text>
+              </Box>
+              <Box>
+                <Text fontWeight={"semibold"} textAlign={"end"}>
+                  Certificate Earned in 2023
+                </Text>
+              </Box>
+            </HStack>
+            <Text as='i' w="40vw" >
+            Manage and monitor Azure services, implement security, deploy and manage infrastructure, govern solutions, optimize performance,
+            troubleshoot issues, and automate tasks using various Azure tools.
+            </Text>
             <Heading size={"md"} pt={4} pb={2}>
               Projects
             </Heading>
 
             <HStack>
               <Box w="40vw">
-                <Text fontWeight={"semibold"}>Cloud Resume Challenge</Text>
+                <Text fontWeight={"semibold"}>Cloud Resume</Text>
               </Box>
               <Box>
                 <Text fontWeight={"semibold"} textAlign={"end"}>
-                  Completed
+                  2022 - 2023
                 </Text>
               </Box>
             </HStack>
-
-            <UnorderedList pl={5}>
-              <ListItem>
-                Azure Static Web Apps - Reactjs using Vite to create a front end
-                site
-              </ListItem>
-              <ListItem>Azure Function HTTP Trigger</ListItem>
-              <ListItem>Azure Cosmos DB</ListItem>
-              <ListItem>Azure DNS Zone</ListItem>
-              <ListItem>
-                GitHub Actions (CI/CD) for the website and function app
-              </ListItem>
-            </UnorderedList>
+            <Text as='i' w="40vw">
+              The front-end was built using Vite and React, and the website was deployed through Azure Static Web Apps. An Azure Function HTTP
+              trigger was integrated into the website to track visitor count. Continuous deployment was automated through Github Actions. For
+              secure management of secrets, Azure Key Vault with Managed Identity was used. Domain management was handled through Azure
+              DNS Zone, and Azure Bicep was utilized for Infrastructure as Code.
+            </Text>
+            <Heading size={"md"} pt={4} pb={2}>
+              Work Experience
+            </Heading>
+            <HStack>
+              <Box w="40vw">
+                <Text fontWeight={"semibold"}>Casual Employee</Text>
+              </Box>
+              <Box>
+                <Text fontWeight={"semibold"} textAlign={"end"}>
+                  2017 - 2018
+                </Text>
+              </Box>
+            </HStack>
+            <Text as='i' w="40vw">
+              This job involved working as a team member where efficient solo work was required to take customer orders, prepare food, and
+              maintain the cleanliness of the chain. The role demanded the ability to multitask, prioritize effectively, and remain organized and
+              focused during busy periods.
+            </Text>
           </VStack>
               </TabPanel>
               <TabPanel>
                 <VStack align={'stretch'}>
                 
                   <Blog />
-                
+
                 </VStack>
               </TabPanel>
             </TabPanels>
