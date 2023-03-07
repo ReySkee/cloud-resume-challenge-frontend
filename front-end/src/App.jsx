@@ -83,7 +83,7 @@ function App() {
           </SimpleGrid>
           
           
-          <Box>Page Visited: {response && <p>{response.count}</p>}</Box>
+          <Box> Visitors: {response ? (<p>{response.count}</p>) : (<p>Loading....</p>)}</Box>
           
           
         </Box>
