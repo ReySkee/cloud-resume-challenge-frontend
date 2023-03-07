@@ -83,7 +83,7 @@ function App() {
           </SimpleGrid>
           
           
-          <Box> Visitors: {response ? (<p>{response.count}</p>) : (<p>Loading....</p>)}</Box>
+          <Box textAlign='center'><Text fontWeight={"semibold"}>Visitors</Text> {response ? (<Text>{response.count}</Text>) : (<Text as='i'>...Loading</Text>)}</Box>
           
           
         </Box>
